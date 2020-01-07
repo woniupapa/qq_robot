@@ -1,0 +1,26 @@
+version: "3.1"
+services:
+  
+  cqhttp:
+    image: richardchien/cqhttp:latest
+    restart: always
+    ports:
+      - "9000:9000"  # the website access port
+      - "5700:5700"  # http_api port, don't change it better
+    volumes:
+      - $PWD/coolq:/home/user/coolq # don't change it/
+    networks:
+      - app_net-cqhttp
+    environment:
+      - VNC_PASSWD=password # your website password
+      - COOLQ_ACCOUNT=123456789 # your qq account
+      - CQHTTP_POST_URL=http://host.docker.internal:8080 # your post url, the same port with your config of bot.run(port=xxx), 'host.docker.internal' on MacOS or window and '172.17.0.1' on linux
+      - CQHTTP_SERVE_DATA_FILES=yes # just like this, don't change it
+      - COOLQ_URL=http://dlsec.cqp.me/cqp-tuling # if you are pro, do not change it, if you are not, use this: http://dlsec.cqp.me/cqa-tuling
+
+    container_name: cqhttp
+  
+  
+networks:
+  app_net-cqhttp:
+    driver: bridge
