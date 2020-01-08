@@ -33,9 +33,8 @@ async def repeat(session: CommandSession):
 
     repeater = Repeat()
 
-    repeater.push_group_msg(group_id, msg_obj)
-    print(repeater.group_msg[group_id])
-    if repeater.is_repeat(group_id):
+    is_repeat = repeater.push_group_msg(group_id, msg_obj)
+    if is_repeat:
         await session.send(msg_obj)
     else:
         return
