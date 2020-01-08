@@ -34,13 +34,14 @@
 **启动**  
 在项目目录下执行 `docker-compose up -d`  
 访问你的 `ip:9000` （如果是本地就是 `127.0.0.1:9000`）按操作填写密码，登录qq   
-登录qq后，在项目目录中找到文件 `coolq/app/io.github.richardchien.coolqhttpapi/config/[你登录的qq号].ini` (有可能是json)，并修改为如下内容  
+登录qq后，在项目目录中找到文件 `coolq/app/io.github.richardchien.coolqhttpapi/config/[你登录的qq号].ini` (有可能是json)，并追加如下内容  
 ```
 [你登录的qq号]
 ws_reverse_api_url = ws://host.docker.internal:8080/ws/api/  
 ws_reverse_event_url = ws://host.docker.internal:8080/ws/event/  
 use_ws_reverse = true
 ```
+ws地址，根据不同的机器，ip是不同的，centos等可能是172.17.0.1
 如果是json格式，则按照json的规范填写上述内容  
 重启httpAPI插件（在浏览器访问的窗口中，右击浮悬窗>应用>HTTP API>重启应用）
 
