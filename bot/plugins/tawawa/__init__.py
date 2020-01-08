@@ -11,22 +11,22 @@ from .helper import *
 @on_command('tawawa')
 async def tawawa(session: CommandSession):
     qq_number = '10000'  # todo it should be catch from session
-    try:
-        msg, ok, no = action.start(qq_number)
-        print([msg, ok, no])
-        log.write([msg, ok, no])
-        if ok is False:
-            await session.send(msg)
-        else:
-            prev_msg = '现在发送第' + str(no) + '话'
-            await session.send(prev_msg)
+    # try:
+    msg, ok, no = action.start(qq_number)
+    print([msg, ok, no])
+    log.write([msg, ok, no])
+    if ok is False:
+        await session.send(msg)
+    else:
+        prev_msg = '现在发送第' + str(no) + '话'
+        await session.send(prev_msg)
 
-            b64_str = get_b64_content(msg)
-            seg = MessageSegment.image(b64_str)
-            await session.send(seg)
-    except Exception as e:
-        log.write(e)
-        await session.send('发生了些小小的错误呢')
+        b64_str = get_b64_content(msg)
+        seg = MessageSegment.image(b64_str)
+        await session.send(seg)
+    # except Exception as e:
+    #     log.write(e)
+    #     await session.send('发生了些小小的错误呢')
 
 
 @tawawa.args_parser
