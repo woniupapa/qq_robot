@@ -14,8 +14,8 @@ services:
     environment:
       - VNC_PASSWD=password # your website password
       - COOLQ_ACCOUNT=123456789 # your qq account
-      - CQHTTP_SERVE_DATA_FILES=yes # just like this, don't change it
-      - COOLQ_URL=http://dlsec.cqp.me/cqp-tuling # if you are pro, do not change it, if you are not, use this: http://dlsec.cqp.me/cqa-tuling
+      - CQHTTP_WS_REVERSE_API_URL=ws://host.docker.internal:8080/ws/api/
+      - CQHTTP_WS_REVERSE_EVENT_URL = ws://host.docker.internal:8080/ws/event/
 
     container_name: cqhttp
   

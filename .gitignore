@@ -8,3 +8,4 @@ docker-compose.yml
 bot/config.py
 lock_no
 nohup.out
+test.py

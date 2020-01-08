@@ -1,6 +1,6 @@
 # encoding=utf-8
 """
-test file
+main file
 """
 
 # print crontab.is_catch_time()
@@ -19,4 +19,4 @@ if __name__ == '__main__':
         ),
         'bot.plugins'
     )
-    nonebot.run(host='0.0.0.0', port=8080)
+    nonebot.run(host=config.HOST, port=config.PORT)
