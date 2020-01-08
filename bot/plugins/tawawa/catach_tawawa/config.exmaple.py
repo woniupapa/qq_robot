@@ -24,7 +24,7 @@ def should_catch_no(qq_number):
     if not os.path.exists('lock/lock_no_' + qq_number):
         return 0
 
-    with open('lock_no', 'r+') as f:
+    with open('lock/lock_no_' + qq_number, 'r+') as f:
         no = f.read()
 
     return no

@@ -15,7 +15,9 @@ services:
       - VNC_PASSWD=password # your website password
       - COOLQ_ACCOUNT=123456789 # your qq account
       - CQHTTP_WS_REVERSE_API_URL=ws://host.docker.internal:8080/ws/api/
-      - CQHTTP_WS_REVERSE_EVENT_URL = ws://host.docker.internal:8080/ws/event/
+      - CQHTTP_WS_REVERSE_EVENT_URL=ws://host.docker.internal:8080/ws/event/
+      - CQHTTP_USE_WS_REVERSE=true
+      - COOLQ_URL=http://dlsec.cqp.me/cqa-tuling
 
     container_name: cqhttp
   

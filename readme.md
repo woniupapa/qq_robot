@@ -18,7 +18,7 @@
 ## 运行 
 **配置**  
 1. 将下列文件的 `.example` 文件copy一份出来，并去掉 `.example` 部分  
-`cp docker-compose.example.yml docker-compose.yml` 
+`cp docker-compose.example.yml docker-compose.yml`  
 `cp bot/config.example.py bot/config.py`  
 `cp bot/plugins/tawawa/catach_tawawa/config.exmaple.py bot/plugins/tawawa/catach_tawawa/config.py`  
 
