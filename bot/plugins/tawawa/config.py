@@ -1,5 +1,3 @@
-# encoding=utf-8
-
 # strange stone's twitter home page
 target_url = 'https://twitter.com/Strangestone?lang=ja'
 

@@ -2,8 +2,12 @@ from lxml import etree
 from bot.plugins.tawawa.catach_tawawa import pattern
 
 
-# find target picture link and file name from html
 def find_twitter(o_html):
+    """
+    # find target picture link and file name from html
+    :param o_html:
+    :return:
+    """
     # init html with etree lib
     html = etree.HTML(o_html)
     result = html.xpath('//div[@class="content"]')

@@ -1,10 +1,6 @@
-# encoding=utf-8
 """
 main file
 """
-
-# print crontab.is_catch_time()
-
 
 import nonebot
 from os import path

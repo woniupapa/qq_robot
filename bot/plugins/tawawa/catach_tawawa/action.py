@@ -1,5 +1,3 @@
-# encoding=utf-8
-
 from bot.plugins.tawawa.catach_tawawa import catch_content, clean, log, store
 
 
