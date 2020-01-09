@@ -1,4 +1,6 @@
-# 一个基于nonebot的爬取星期一的丰满漫画的qq机器人
+# 基于 coolq 和 nonebot 的机器人
+
+## 包含复读，发送最新的月曜日のたわわ漫画等功能
 
 ## 准备
 - 需要有docker环境，并且安装docker-compose工具
