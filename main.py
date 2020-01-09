@@ -8,7 +8,7 @@ main file
 
 import nonebot
 from os import path
-import bot.config as config
+import bot.config.bot_config as config
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 import os
 import time
-from bot.plugins.tawawa.catach_tawawa import config
+from bot.plugins.tawawa import config
 
 # set default timezone
 os.environ['TZ'] = config.TZ

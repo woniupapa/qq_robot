@@ -1,5 +1,5 @@
 # encoding=utf-8
-from bot.plugins.tawawa.catach_tawawa import watata_email, config
+from bot.plugins.tawawa import config
 import os
 
 
@@ -25,10 +25,6 @@ def save_png(source, no, qq_number):
     # update lock number
     with open('lock/lock_no_' + qq_number, 'w+') as f:
         f.write(no)
-
-    # send email with png attachment
-    # receive with QQ bot, so don't send email here
-    # watata_email.send_email(no, full_path, file_name)
 
     return [full_path, True]
 

@@ -5,7 +5,7 @@ coolq/*
 *.ini
 docker-compose.yml
 /config.py
-bot/config.py
+bot/config/
 lock_no
 nohup.out
 test.py

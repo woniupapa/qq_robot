@@ -1,5 +1,5 @@
 import requests
-from bot.plugins.tawawa.catach_tawawa import config
+from bot.plugins.tawawa import config
 
 
 # get html content from twitter

@@ -1,5 +1,5 @@
 import logging
-from bot.plugins.tawawa.catach_tawawa import config
+from bot.plugins.tawawa import config
 import os
 
 log_path = config.log_path

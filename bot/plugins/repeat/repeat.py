@@ -155,7 +155,7 @@ class Repeat:
         """
         # 将噪音消息插入，然后进行判断，如果噪音消息列表长度超过 self.max_noise_msg_len 则认为复读中断
         # 未中断，返回 True ，意味着插入噪音成功
-        # 中断，返回 Flase，意味着插入噪音失败
+        # 中断，返回 False，意味着插入噪音失败
         self.group_msg[group_id]['noise_msg'].append(noise_msg)
         noise_msg_list = self.get_group_msg_prop(group_id, 'noise_msg')
         if len(noise_msg_list) > self.max_noise_msg_len:
@@ -187,7 +187,7 @@ class Repeat:
             else:
                 is_init = True
         else:
-            # 只要认为消息在复读，则清空噪音池
+            # 如果还在噪音允许范围内，又一次出现了复读语句，那么认为复读被续命了，这时候清空噪音池
             self.set_group_msg_prop(group_id, 'noise_msg', [])
 
         if is_init:
