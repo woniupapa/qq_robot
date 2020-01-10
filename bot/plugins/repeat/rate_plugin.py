@@ -8,7 +8,7 @@ MOD_CUSTOM = 'mod_custom'   # 完全自定义一个随机函数
 
 
 def default_plugin():
-    return 'mode_1'
+    return 'mod_1'
 
 
 global_plugin = default_plugin()
@@ -20,6 +20,7 @@ def set_plugin(plugin=None, *args, **kwargs):
     :param plugin:
     :return:
     """
+
     arg_1 = plugin
 
     try:
@@ -29,6 +30,7 @@ def set_plugin(plugin=None, *args, **kwargs):
 
     if type(plugin) is str:
         plugin_obj = globals().get(plugin)
+
         if callable(plugin_obj):
             use_default = False
         else:
@@ -50,7 +52,7 @@ def set_plugin(plugin=None, *args, **kwargs):
     return rate
 
 
-def mode_1(repeat_count, max_rate=0.8, base_point1=0.99, base_point2=10):
+def mod_1(repeat_count, max_rate=0.8, base_point1=0.99, base_point2=10):
     """
     根据已重复的次数，计算复读的几率，最大的复读几率是 80%
     :param repeat_count:
