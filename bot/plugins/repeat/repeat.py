@@ -1,20 +1,25 @@
 import random
+from bot.plugins.repeat import rate_plugin
 
 
 class Repeat:
     group_msg = {}  # 存放复读消息的字典
 
-    base_point1 = 0.99  # 复读概率基准参数1
-    base_point2 = 10  # 复读概率基准参数2
     max_random = 10000000000  # 随机数最大值
     max_noise_msg_len = 2  # 最大可接受复读被打断的 噪音消息 上限
 
     is_noise = False  # 判断当前是否是噪音消息
 
+    # 要使用的随机插件
+    rand_plugin = rate_plugin.MOD_1
+    # 随机插件的参数
+    rand_plugin_args = ()
+    # 随机插件的命名参数
+    rand_plugin_kwargs = {}
+
     def is_repeat(self, group_id):
         """
         判断是否要复读
-
         :param group_id:
         :return:
         """
@@ -50,24 +55,10 @@ class Repeat:
 
     def get_rate(self, repeat_count):
         """
-        根据已重复的次数，计算复读的几率，目前最大的复读几率是 80%
         :param repeat_count:
         :return:
         """
-        if repeat_count < 1:
-            return 0
-
-        p1 = self.base_point1
-        for c in range(1, repeat_count + 1):
-            p1 = p1 + 0.9 / (10 ** (1 + c))
-        p2 = self.base_point2 ** (2 * repeat_count - 1)
-        rate = 1 - (p1 ** p2)
-
-        # 最大复读概率 80%
-        if rate > 0.80:
-            return 0.80
-
-        return rate
+        return rate_plugin.set_plugin(self.rand_plugin, repeat_count, *self.rand_plugin_args, **self.rand_plugin_kwargs)
 
     def rand_repeat(self, rate):
         """
