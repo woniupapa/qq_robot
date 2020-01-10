@@ -5,7 +5,10 @@ coolq/*
 *.ini
 docker-compose.yml
 /config.py
-bot/config/
+
+# 忽略所有 bot/config/ 下所有配置文件，配置模板文件不忽略
+bot/config/*
+!bot/config/*example*
 lock_no
 nohup.out
 test.py
