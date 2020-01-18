@@ -11,4 +11,4 @@ bot/config/*
 !bot/config/*example*
 lock_no
 nohup.out
-test.py
+test.*

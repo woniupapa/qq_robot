@@ -43,6 +43,15 @@ COOLQ_URL=http://dlsec.cqp.me/cqa-tuling # 下载的酷Q版本，pro版本将 cq
 在项目目录下 `python main.py`(根据你的python3安装方法，等等，可能是`python3 main.py`)，出现如下格式的提示则表示成功了  
 ```
 [2020-01-05 12:03:17,113] xxx.xxx.xxx.xxx:xxxx GET /ws/api/ 1.1 101 - 986
-[2020-01-05 12:03:17,145] xxx.xxx.xxx.xxx:xxxx GET /ws/event/ 1.1 101 - 551
+[2020-01-05 12:03:17,145] xxx.xxx.xxx.xxx:xxxx GET /ws/event/ 1.1 101 - 551  
 ```
 
+
+## 插件
+
+已完成：  
+
+插件名 | 文件位置 | 备注
+---|---|---
+复读机 | bot/plugins/repeat |
+比村乳业漫画 | bot/plugins/tawawa |
