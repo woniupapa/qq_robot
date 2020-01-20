@@ -52,7 +52,7 @@ COOLQ_URL=http://dlsec.cqp.me/cqa-tuling # 下载的酷Q版本，pro版本将 cq
 
 插件名 | 文件位置 | 备注 | 状态
 ---|---|---|---
-复读机 | bot/plugins/repeat | | <span color="green">done</span>
-比村乳业漫画 | bot/plugins/tawawa | | <span color="green">done</span>
-P站爬图 | bot/plugins/pixiv | | <span color="red">create task</span>
-定时任务 | bot/plugins/task | | <span color="red">create task</span>
+复读机 | bot/plugins/repeat | | <span style="color:green">done</span>
+比村乳业漫画 | bot/plugins/tawawa | | <span style="color:green">done</span>
+P站爬图 | bot/plugins/pixiv | | <span style="color:yellow">doing</span>
+定时任务 | bot/plugins/task | | <span style="color:red">created task</span>
