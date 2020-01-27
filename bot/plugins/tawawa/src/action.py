@@ -1,4 +1,4 @@
-from bot.plugins.tawawa.catach_tawawa import catch_content, clean, log, store
+from bot.plugins.tawawa.src import catch_content, clean, log, store
 
 
 def action(qq_number):

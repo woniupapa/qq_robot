@@ -1,5 +1,5 @@
 from lxml import etree
-from bot.plugins.tawawa.catach_tawawa import pattern
+from bot.plugins.tawawa.src import pattern
 
 
 def find_twitter(o_html):

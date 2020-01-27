@@ -2,9 +2,9 @@ from aiocqhttp import MessageSegment
 from nonebot import on_command, CommandSession
 from nonebot import on_natural_language, NLPSession, IntentCommand
 
-from bot.plugins.tawawa.catach_tawawa import log
+from bot.plugins.tawawa.src import log
 from .config import *
-import bot.plugins.tawawa.catach_tawawa.action as action
+import bot.plugins.tawawa.src.action as action
 from .helper import *
 
 
@@ -13,7 +13,6 @@ async def tawawa(session: CommandSession):
     qq_number = '10000'  # todo it should be catch from session
     try:
         msg, ok, no = action.start(qq_number)
-        print([msg, ok, no])
         log.write([msg, ok, no])
         if ok is False:
             await session.send(msg)
