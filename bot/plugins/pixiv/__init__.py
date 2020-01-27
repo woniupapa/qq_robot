@@ -16,6 +16,6 @@ async def _(session: CommandSession):
     pass
 
 
-@on_natural_language(only_to_me=False, permission=permission.GROUP)
-async def _(session: NLPSession):
-    return IntentCommand(60.0, 'repeat')
+# @on_natural_language(only_to_me=False, permission=permission.GROUP)
+# async def _(session: NLPSession):
+#     return IntentCommand(60.0, 'repeat')
