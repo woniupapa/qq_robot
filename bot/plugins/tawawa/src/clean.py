@@ -20,7 +20,7 @@ def find_twitter(o_html):
 
         # get the twitter body text with xpath
         x = t_html.xpath('//div[@class="js-tweet-text-container"]/p/text()')
-
+        
         if len(x) == 0:
             continue
             
